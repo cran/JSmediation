@@ -1,5 +1,5 @@
 Package: JSmediation
-Version: 0.1.0
+Version: 0.1.1
 Title: Mediation Analysis Using Joint Significance
 Authors@R: c(
     person("Cédric", "Batailler", 
@@ -24,7 +24,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 ByteCompile: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 Depends: R (>= 2.10)
 URL: https://github.com/cedricbatailler/JSmediation
 BugReports: https://github.com/cedricbatailler/JSmediation/issues
@@ -33,7 +33,7 @@ Imports: rlang (>= 0.1.2), dplyr, magrittr, purrr, glue, broom, tibble,
 Suggests: rmarkdown, testthat, covr, roxygen2
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2019-06-11 12:41:14 UTC; batailce
+Packaged: 2020-01-30 14:13:18 UTC; cedricbatailler
 Author: Cédric Batailler [aut, cre] (<https://orcid.org/0000-0003-0553-6827>),
   Dominique Muller [aut] (<https://orcid.org/0000-0001-9544-5317>),
   Vincent Yzerbyt [aut],
@@ -45,4 +45,4 @@ Author: Cédric Batailler [aut, cre] (<https://orcid.org/0000-0003-0553-6827>),
   Michael Siegrist [dtc]
 Maintainer: Cédric Batailler <cedric.batailler@gmail.com>
 Repository: CRAN
-Date/Publication: 2019-06-13 12:10:03 UTC
+Date/Publication: 2020-01-30 15:20:02 UTC

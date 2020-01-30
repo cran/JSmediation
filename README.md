@@ -36,13 +36,12 @@ column name of the mediator in the data frame).
 
 ## Installation
 
-<!--
-You can install the released version of JSmediation from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of JSmediation from
+[CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("JSmediation")
 ```
--->
 
 You can install the development version from
 [GitHub](https://github.com/) with:
@@ -51,16 +50,6 @@ You can install the development version from
 # install.packages("devtools")
 devtools::install_github("cedricbatailler/JSmediation", build_vignettes = TRUE)
 ```
-
-**Note on reproducibility:** An interesting feature of R is that it
-allows researchers to create reproducible analyses. Because
-`JSmediation` is still in early development (i.e., `0.0.0.9000`), some
-feature might break in future versions.
-
-To make sure that your analysis is reproducible, please remember to
-include `sessioninfo::package_info("JSmediation")` in your script as it
-will provide information related to package version and how you
-installed it.
 
 ## How to use JSmediation
 
@@ -156,7 +145,7 @@ egalitarianism. *Journal of Personality and Social Psychology*,
 
 ## Contributing
 
-Contributions are absolutly welcome. Please note that this project is
+Contributions are absolutely welcome. Please note that this project is
 released with a [Contributor Code of
 Conduct](https://github.com/cedricbatailler/JSmediation/blob/master/CODE_OF_CONDUCT.md).
 
