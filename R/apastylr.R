@@ -3,7 +3,7 @@
 #' @description Create an APA formatted report from the test of a specific term
 #'   in a linear model.
 #'
-#' @param model A linear model created using \code{lm()}.
+#' @param model A linear model created using `lm()`.
 #' @param term A character string representing a term in the linear model.
 #'
 #' @return An APA formatted character string.
@@ -25,10 +25,10 @@ apastylr.lm <- function(model, term) {
   summary_statistics <-
     broom::tidy(model)
 
-  if(nrow(summary_statistics[summary_statistics$term == term, ]) == 0)
-     stop(glue::glue("Could not find \"{term}\" term in the model."),
-          call. = FALSE)
-
+  if (nrow(summary_statistics[summary_statistics$term == term, ]) == 0) {
+    stop(glue("Could not find \"{term}\" term in the model."),
+         call. = FALSE)
+  }
   summary_statistics <- summary_statistics[summary_statistics$term == term, ]
 
   t <-
@@ -36,24 +36,24 @@ apastylr.lm <- function(model, term) {
 
   df <-
     model$df.residual
-  
+
   pvalue <-
     summary_statistics$p.value[1]
-  
+
   as.character(
-    glue::glue("t({df}) = {t}, p {p}",
-               p = ifelse(
-                 pvalue < .001,
-                 "< .001",
-                 sub(
-                   ".",
-                   "= ",
-                   format(round(summary_statistics$p.value, 3),
-                          nsmall = 3
-                   )
-                 )
-               )
+    glue("t({df}) = {t}, p {p}",
+         p = ifelse(
+           pvalue < .001,
+           "< .001",
+           sub(
+             ".",
+             "= ",
+             format(round(summary_statistics$p.value, 3),
+                    nsmall = 3
+             )
+           )
+         )
     )
   )
-  
+
 }

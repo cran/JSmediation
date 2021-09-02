@@ -2,10 +2,10 @@
 #'
 #' @description Adds the confidence interval for the index of
 #'   within-participant mediation to a  model fitted with
-#'   \code{\link{mdt_within}} or \code{\link{mdt_within_wide}}.
-#'   
+#'   [`mdt_within`] or [`mdt_within_wide`].
+#'
 #' @param mediation_model A mediation model of class
-#'   \code{"within_participant_mediation"}.
+#'   `"within_participant_mediation"`.
 #' @param times Number of simulations to use to compute the Monte Carlo indirect
 #'   effect confidence interval.
 #' @param level Alpha threshold to use for the confidence interval.
@@ -18,7 +18,7 @@
 #'
 #' @references MacKinnon, D. P., Lockwood, C. M., & Williams, J. (2004).
 #'   Confidence Limits for the Indirect Effect: Distribution of the Product and
-#'   Resampling Methods. \emph{Multivariate Behavioral Research}, \emph{39}(1),
+#'   Resampling Methods. *Multivariate Behavioral Research*, *39*(1),
 #'   99-128. doi: 10.1207/s15327906mbr3901_4
 #'
 #' @examples
@@ -31,7 +31,8 @@
 #' add_index(within_model)
 #'
 #' @export
-add_index.within_participant_mediation <- function(mediation_model, times = 5000, level = .05, ...) {
+add_index.within_participant_mediation <-
+  function(mediation_model, times = 5000, level = .05, ...) {
 
   a   <- purrr::pluck(mediation_model, "paths", "a", "point_estimate")
   sea <- purrr::pluck(mediation_model, "paths", "a", "se")
@@ -48,7 +49,7 @@ add_index.within_participant_mediation <- function(mediation_model, times = 5000
                       nrow = 2
                     ))
 
-  indirect_sampling <- ab_sampling[ , 1] * ab_sampling[ , 2]
+  indirect_sampling <- ab_sampling[, 1] * ab_sampling[, 2]
   CI <- stats::quantile(indirect_sampling, c(level / 2, 1 - level / 2))
   contains_zero <- (CI[[1]] < 0 & CI[[2]] > 0)
 
@@ -58,9 +59,9 @@ add_index.within_participant_mediation <- function(mediation_model, times = 5000
                     level      = level,
                     times      = times,
                     sampling   = indirect_sampling)
-  
+
   mediation_model$indirect_index <- TRUE
   mediation_model$indirect_index_infos <- indirect_index_infos
-  
+
   mediation_model
 }

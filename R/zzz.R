@@ -18,10 +18,15 @@ is_centered <- function(x) {
 }
 
 
-
 access_data <- function(mediation_model, variable) {
   variable_q <- enquo(variable)
 
   purrr::pluck(mediation_model, "data") %>%
-    dplyr::pull( !! variable_q )
+    dplyr::pull(!! variable_q)
+}
+
+release_questions <- function() {
+  c(
+    "Have run `urlchecker::url_check()`?"
+    )
 }

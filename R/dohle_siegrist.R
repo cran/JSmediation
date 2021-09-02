@@ -8,10 +8,10 @@
 #'   complex drug names are perceived as more hazardous, which makes someone
 #'   less likely to buy the drug. Researchers used a within-subject design.
 #'
-#'   This data set is in a long-format, see \code{\link{mdt_within}} to conduct
+#'   This data set is in a long-format, see [`mdt_within`] to conduct
 #'   a within-participant mediation analysis with this data set.
 #'
-#' @format A data frame with 44 rows and 4 variables: 
+#' @format A data frame with 44 rows and 4 variables:
 #' \describe{
 #'   \item{participant}{Participant number.}
 #'   \item{name}{Name of the drugs ("simple" vs. "complex").}
@@ -21,7 +21,7 @@
 #'
 #' @references Dohle, S., & Siegrist, M. (2014). Fluency of pharmaceutical drug
 #'   names predicts perceived hazardousness, assumed side effects and
-#'   willingness to buy. \emph{Journal of Health Psychology}, \emph{19}(10),
+#'   willingness to buy. *Journal of Health Psychology*, *19*(10),
 #'   1241-1249. doi: 10.1177/1359105313488974
 
 

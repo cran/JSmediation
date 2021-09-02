@@ -8,6 +8,8 @@ knitr::opts_chunk$set(
 library(JSmediation)
 
 ## -----------------------------------------------------------------------------
+data(ho_et_al)
+
 head(ho_et_al)
 
 ## -----------------------------------------------------------------------------
@@ -18,36 +20,28 @@ ho_et_al$condition_c <- build_contrast(ho_et_al$condition,
 head(ho_et_al)
 
 ## -----------------------------------------------------------------------------
-my_model <- 
+mediation_fit <- 
   mdt_simple(ho_et_al,
              IV = condition_c,
              DV = hypodescent,
              M  = linkedfate)
 
-## -----------------------------------------------------------------------------
-model_1 <- extract_model(my_model, step = "X -> M")
+## ----fig.height=8, fig.width=7, out.width="100%"------------------------------
+first_model <- extract_model(mediation_fit, step = "X -> M")
+performance::check_model(first_model)
 
-plot(model_1, ask = FALSE)
+## ----fig.height=8, fig.width=7, out.width="100%"------------------------------
+second_model <- extract_model(mediation_fit, step = 2)
+performance::check_model(second_model)
 
-## -----------------------------------------------------------------------------
-model_2 <- extract_model(my_model, step = 2)
-
-plot(model_2, ask = FALSE)
-
-## -----------------------------------------------------------------------------
-model_3 <- extract_model(my_model, step = 3)
-
-plot(model_3, ask = FALSE)
+## ----fig.height=8, fig.width=7, out.width="100%"------------------------------
+third_model <- extract_model(mediation_fit, step = 3)
+performance::check_model(third_model)
 
 ## ---- render="asis"-----------------------------------------------------------
-my_model
+mediation_fit
 
 ## -----------------------------------------------------------------------------
-add_index(my_model)
-
-## -----------------------------------------------------------------------------
-display_models(my_model)
-
-## -----------------------------------------------------------------------------
-extract_tidy_models(my_model)
+model_fit_with_index <- add_index(mediation_fit)
+model_fit_with_index
 
