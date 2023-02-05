@@ -1,6 +1,6 @@
 Package: JSmediation
 Title: Mediation Analysis Using Joint Significance
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: 
     c(person(given = "Cédric",
              family = "Batailler",
@@ -45,19 +45,19 @@ URL: https://jsmediation.cedricbatailler.me/,
 BugReports: https://github.com/cedricbatailler/JSmediation/issues
 Depends: R (>= 2.10)
 Imports: broom, data.table, dplyr, glue, knitr, magrittr, MASS, purrr,
-        rlang (>= 0.4.9), stats, tibble, utils
+        rlang (>= 0.4.9), stats, tibble
 Suggests: covr, lavaan, markdown, mediation, patchwork, performance,
-        processR, rmarkdown, roxygen2, see (>= 0.6.5), stringr,
-        testthat (>= 3.0.2), vdiffr, withr
+        rmarkdown, roxygen2, see (>= 0.6.5), stringr, testthat (>=
+        3.0.2), vdiffr, withr
 VignetteBuilder: knitr
 ByteCompile: true
 Config/testthat/edition: 3
 Config/testthat/parallel: true
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.3
 NeedsCompilation: no
-Packaged: 2021-09-02 08:06:33 UTC; cedricbatailler
+Packaged: 2023-02-05 14:24:23 UTC; cedri
 Author: Cédric Batailler [aut, cre] (<https://orcid.org/0000-0003-0553-6827>),
   Dominique Muller [aut] (<https://orcid.org/0000-0001-9544-5317>),
   Vincent Yzerbyt [aut],
@@ -70,4 +70,4 @@ Author: Cédric Batailler [aut, cre] (<https://orcid.org/0000-0003-0553-6827>),
   Michael Siegrist [dtc]
 Maintainer: Cédric Batailler <cedric.batailler@gmail.com>
 Repository: CRAN
-Date/Publication: 2021-09-02 22:30:08 UTC
+Date/Publication: 2023-02-05 22:22:29 UTC
