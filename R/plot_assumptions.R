@@ -15,11 +15,14 @@
 #'
 #' @return Invisibly returns an object of class \code{mediation_model}.
 #'
-#' @examples
+#' @examplesIf rlang::is_installed("see")
+#'
 #' data(ho_et_al)
+#'
 #' ho_et_al$condition_c <- build_contrast(ho_et_al$condition,
 #'                                        "Low discrimination",
 #'                                        "High discrimination")
+#'
 #' my_model <-
 #'   mdt_simple(data = ho_et_al,
 #'              IV = condition_c,
@@ -120,12 +123,11 @@ check_model_plot <- function(model, title, tests_to_perform) {
     format()
 
   # plot the assumptions
-  assumption_plot <-
-    plot(performance::check_model(model, check = tests_to_perform))
+  assumption_plots <-
+    performance::check_model(model, check = tests_to_perform, panel = FALSE)
 
-  assumption_plot +
-    patchwork::plot_annotation(title = title,
-                               subtitle =
-                                 glue::glue("Model formula: {model_formula}"),
-    )
+  see::plots(
+    plot(assumption_plots),
+    title = glue::glue("Model formula: {model_formula}")
+  )
 }
