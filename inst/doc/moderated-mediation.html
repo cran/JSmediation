@@ -49,7 +49,7 @@ overflow: visible;
 </style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -148,6 +148,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; }
 div.csl-bib-body { }
 div.csl-entry {
 clear: both;
+margin-bottom: 0em;
 }
 .hanging div.csl-entry {
 margin-left:2em;
@@ -644,7 +645,7 @@ the moderator and the DV (i.e., both <span class="math inline">\(a\)</span> and 
 <span id="cb9-31"><a href="#cb9-31" tabindex="-1"></a><span class="co">#&gt; - confidence interval:</span></span>
 <span id="cb9-32"><a href="#cb9-32" tabindex="-1"></a><span class="co">#&gt;   - method: Monte Carlo (5000 iterations)</span></span>
 <span id="cb9-33"><a href="#cb9-33" tabindex="-1"></a><span class="co">#&gt;   - level: 0.05 </span></span>
-<span id="cb9-34"><a href="#cb9-34" tabindex="-1"></a><span class="co">#&gt;   - CI: [-0.0763; -0.0162]</span></span>
+<span id="cb9-34"><a href="#cb9-34" tabindex="-1"></a><span class="co">#&gt;   - CI: [-0.0784; -0.0162]</span></span>
 <span id="cb9-35"><a href="#cb9-35" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb9-36"><a href="#cb9-36" tabindex="-1"></a><span class="co">#&gt; Fitted models:</span></span>
 <span id="cb9-37"><a href="#cb9-37" tabindex="-1"></a><span class="co">#&gt; </span></span>
@@ -696,7 +697,7 @@ value of SDO, we would have to run the following:</p>
 <span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="co">#&gt; - confidence interval:</span></span>
 <span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="co">#&gt;   - method: Monte Carlo (5000 iterations)</span></span>
 <span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="co">#&gt;   - level: 0.05 </span></span>
-<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="co">#&gt;   - CI: [0.0411; 0.145]</span></span></code></pre></div>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="co">#&gt;   - CI: [0.0422; 0.144]</span></span></code></pre></div>
 <p>We could also compute this indirect effect for participants who score
 one standard deviation above the mean in terms of SDO.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">compute_indirect_effect_for</span>(moderated_mediation_fit, <span class="at">Mod =</span> <span class="dv">1</span>)</span>
@@ -705,14 +706,14 @@ one standard deviation above the mean in terms of SDO.</p>
 <span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="co">#&gt; - confidence interval:</span></span>
 <span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="co">#&gt;   - method: Monte Carlo (5000 iterations)</span></span>
 <span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a><span class="co">#&gt;   - level: 0.05 </span></span>
-<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a><span class="co">#&gt;   - CI: [-0.0062; 0.0749]</span></span></code></pre></div>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a><span class="co">#&gt;   - CI: [-0.00703; 0.0755]</span></span></code></pre></div>
 <p>As we can see, the indirect effect estimate decreases when the SDO
 increases. This result is consistent with the negative value of the
 moderated mediation index.</p>
 </div>
 <div id="references" class="section level1 unnumbered">
 <h1 class="unnumbered">References</h1>
-<div id="refs" class="references csl-bib-body hanging-indent" line-spacing="2">
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0" line-spacing="2">
 <div id="ref-ho_youre_2017" class="csl-entry">
 Ho, A. K., Kteily, N. S., &amp; Chen, J. M. (2017).
 <span>“<span>You</span>’re one of us”</span>: <span>Black

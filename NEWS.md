@@ -1,8 +1,13 @@
+# JSmediation (0.2.3)
+
+* Improve cross-refs in documentation
+* Update authors info
+
 # JSmediation (0.2.2)
 
 ## Minor improvements and bug fixes
 
-* Some tests, examples, and parts of the vignettes are now conditionnal
+* Some tests, examples, and parts of the vignettes are now conditional
 * Fix issues related to assumption check functions
 * Fix some typos in documentation
 * Small maintenance tasks
